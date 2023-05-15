@@ -25,8 +25,6 @@ public class SettingActivity extends AppCompatActivity {
         sp_textcolor = findViewById(R.id.sp_textcolor);
         btn_confirm = findViewById(R.id.btn_confirm);
 
-
-
         String[] string_array_bg = {"Default","Warm","Cold","Horror"};
         String[] string_array_tc = {"Dark","Light"};
 
@@ -38,9 +36,43 @@ public class SettingActivity extends AppCompatActivity {
         adapter2.setDropDownViewResource(androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
         sp_textcolor.setAdapter(adapter2);
 
+        //get return value
+        //load the preference
+        SharedPreferences sf = getSharedPreferences(FILE_NAME,MODE_PRIVATE);
+        String bg = sf.getString(BG_KEY,"");
+        String tc = sf.getString(TC_KEY,"");
+        // read from file
+        if(!bg.isEmpty()){
+            if (bg.equalsIgnoreCase("Default"))
+            {
+                sp_background.setSelection(0);
+            }
+            else if (bg.equalsIgnoreCase("Warm"))
+            {
+                sp_background.setSelection(1);
+            }
+            else if (bg.equalsIgnoreCase("Cold")){
+                sp_background.setSelection(2);
+            }
+            else if (bg.equalsIgnoreCase("Horror")){
+                sp_background.setSelection(3);
+            }
+        }
+        //set text color
+        if(!tc.isEmpty()){
+            if (tc.equalsIgnoreCase("Dark"))
+            {
+                sp_textcolor.setSelection(0);
+            }
+            else if (tc.equalsIgnoreCase("Light"))
+            {
+                sp_textcolor.setSelection(1);
+            }
+        }
+
         btn_confirm.setOnClickListener(v -> {
             //send back data
-            SharedPreferences sf = getSharedPreferences(FILE_NAME,MODE_PRIVATE);
+            //SharedPreferences sf = getSharedPreferences(FILE_NAME,MODE_PRIVATE);
             SharedPreferences.Editor edit = sf.edit();
             edit.putString(BG_KEY,sp_background.getSelectedItem().toString());
             edit.putString(TC_KEY,sp_textcolor.getSelectedItem().toString());
@@ -49,6 +81,6 @@ public class SettingActivity extends AppCompatActivity {
             finish();
         });
 
-
     }
+
 }
