@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_biography"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/im_biography"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                app:srcCompat="@drawable/biography" />
+
+            <TextView
+                android:id="@+id/tv_biography"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:includeFontPadding="true"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:text="Biography"
+                android:textColor="@color/white"
+                android:textAlignment="textEnd"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="#E91E63" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_romance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_romance"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                app:srcCompat="@drawable/novel" />
+
+            <TextView
+                android:id="@+id/tv_romance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Romance Novel"
+                android:textColor="@color/white"
+                android:includeFontPadding="true"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="textEnd"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="#E91E63" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fiction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_fiction"
+                android:layout_width="match_parent"
+                android:layout_height="247dp"
+                app:srcCompat="@drawable/fiction" />
+
+            <TextView
+                android:id="@+id/tv_fiction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fiction"
+                android:textColor="@color/white"
+                android:includeFontPadding="true"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="textEnd"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="#E91E63" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_poem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_poem"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                app:srcCompat="@drawable/poetry" />
+
+            <TextView
+                android:id="@+id/tv_poem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poem"
+                android:textColor="@color/white"
+                android:includeFontPadding="true"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="10dp"
+                android:textAlignment="textEnd"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:background="#E91E63" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

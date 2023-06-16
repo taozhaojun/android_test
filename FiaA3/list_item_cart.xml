@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_weight="100"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_card_item_name"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="60"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:text="Book Name"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/tv_card_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="Quantity" />
+
+    <TextView
+        android:id="@+id/tv_card_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+        android:layout_marginRight="10dp"
+        android:text="Price" />
+
+    <TextView
+        android:id="@+id/tv_card_total"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:text="total"
+        android:textColor="@color/black"
+        android:gravity="center" />
+
+</LinearLayout>
